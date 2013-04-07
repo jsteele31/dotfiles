@@ -1,0 +1,14 @@
+out_to_console yes
+out_to_x no
+background no
+update_interval 2
+total_run_times 0
+use_spacer none
+mpd_host          	localhost
+mpd_port		6600
+
+#Scripts
+# ${execpi 300 python ~/.scripts/gmail.py} -- GMAIL
+
+TEXT
+${execi 10000 echo -e \\x06}Date: ${execi 10000 echo -e \\x07} ${time %A, %d %B %Y} ${execi 10000 echo -e \\x08} MPD: ${execi 10000 echo -e \\x0B} ${mpd_smart} ${execi 10000 echo -e \\x05}Time: ${execi 10000 echo -e \\x09}${time %I:%M %P}${execi 10000 echo -e \\x06} Gmail: ${execi 10000 echo -e \\x04}${execpi 300 python ~/Scripts/gmail.py}

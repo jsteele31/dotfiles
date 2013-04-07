@@ -1,0 +1,62 @@
+###################################################
+## ~/.ncmpcpp/config
+###################################################
+
+##### connection settings #####
+
+mpd_host = "localhost"
+mpd_music_dir = "/home/jacob/music"
+mpd_connection_timeout = "5"
+mpd_crossfade_time = "5"
+
+##### delays #####
+
+playlist_disable_highlight_delay = "5"
+
+##### song format #####
+
+song_status_format = "%a \"%b\" - {%t}|{%f}"
+song_library_format = "{%n - }{%t}|{%f}"
+now_playing_prefix = "$r$b"
+now_playing_suffix = "$/b$/r"
+song_columns_list_format = "(7f)[red]{l} (25)[white]{a} (40)[]{b} (30)[green]{t}"
+
+##### various settings #####
+
+execute_on_song_change = ""
+playlist_shorten_total_times = "yes"
+playlist_display_mode = "columns" (classic/columns)
+browser_display_mode = "columns" (classic/columns)
+discard_colors_if_item_is_selected = "yes"
+incremental_seeking = "yes"
+seek_time = "1"
+autocenter_mode = "no"
+centered_cursor = "yes"
+progressbar_look = "=>"
+media_library_left_column = "a" (possible values: a,y,g,c,p, legend above)
+default_find_mode = "wrapped" (wrapped/normal)
+default_space_mode = "add" (add/select)
+default_tag_editor_left_col = "albums" (albums/dirs)
+default_tag_editor_pattern = "%n - %t"
+header_visibility = "yes"
+statusbar_visibility = "yes"
+titles_visibility = "yes"
+header_text_scrolling = "yes"
+fancy_scrolling = "yes"
+cyclic_scrolling = "yes"
+lines_scrolled = "2"
+startup_screen = "2"
+jump_to_now_playing_song_at_start = "yes"
+ask_before_clearing_main_playlist = "no"
+ignore_leading_the = "yes"
+mouse_support = "no"
+mouse_list_scroll_whole_page = "yes"
+
+##### colors definitions #####
+
+colors_enabled = "yes"
+empty_tag_color = "cyan"
+main_window_color = "yellow"
+main_window_highlight_color = "red"
+progressbar_color = "magenta"
+active_column_color = "green"
