@@ -12,3 +12,8 @@ mpd_port		6600
 
 TEXT
 ${execi 10000 echo -e \\x06}Date: ${execi 10000 echo -e \\x07} ${time %A, %d %B %Y} ${execi 10000 echo -e \\x08} MPD: ${execi 10000 echo -e \\x0B} ${mpd_smart} ${execi 10000 echo -e \\x05}Time: ${execi 10000 echo -e \\x09}${time %I:%M %P}${execi 10000 echo -e \\x06} Gmail: ${execi 10000 echo -e \\x04}${execpi 300 python ~/Scripts/gmail.py}
+
+OR
+
+TEXT
+^fg(\#6cbeb7) ^i(/home/jacob/icons/arch1.xbm) ^fg(\#eee9c8) ${exec ~/.scripts/wingo-workspace-dzen2.py} ^fg(\#6cbeb7) ^i(/home/jacob/icons/arch1.xbm) ^fg(\#c1827c) ^i(/home/jacob/icons/note1.xbm) ^fg(\#dbf2c4) $mpd_smart :: ^fg(\#f2f2c4) ^i(/home/jacob/icons/mail1.xbm) ${execpi 300 python ~/.scripts/gmail.py} ::  ^fg(\#c4f2f2) ^i(/home/jacob/icons/mem1.xbm) $memperc% :: ^fg(\#f2c4f2) ^i(/home/jacob/icons/wireless1.xbm) ^i(/home/jacob/icons/downarrow1.xbm) ${downspeed wlp5s0} ^i(/home/jacob/icons/uparrow1.xbm) ${upspeed wlp5s0} ^fg(\#f2dbc4) :: ^i(/home/jacob/icons/clock1.xbm) ${time %I:%M %P} ^fg(\#fbfbee) :: ^i(/home/jacob/icons/info8.xbm) ${time %A, %d %B %Y} :: ^fg(\#90be49) ^i(/home/jacob/icons/pacman1.xbm) Updates: ${if_match ${execi 1800 (checkupdates | wc -l)} == 0} ^fg(\#55be49)up to date ${else}^fg(\#be4955)${execi 1800 (checkupdates | wc -l)}new packages${endif}
